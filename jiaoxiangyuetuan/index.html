@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交响乐团招聘 - 职业音乐家求职与乐团招聘信息平台</title>
+    <meta name="description" content="提供权威的交响乐团招聘信息发布，涵盖首席小提琴、大提琴、圆号、打击乐等管弦乐团职位。包含求职指南、面试准备技巧及职业发展建议。">
+    <meta name="keywords" content="交响乐团招聘,管弦乐团求职,音乐家招聘,交响乐职业,乐团招聘信息,音乐职业发展">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a237e;
+            --secondary-color: #c5a065;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background-color: #0d1447;
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #283593 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Job Categories */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background: var(--white);
+            padding: 30px 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-color: var(--secondary-color);
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .category-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .category-card p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Job Listings */
+        .job-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .job-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--secondary-color);
+            transition: transform 0.2s;
+        }
+
+        .job-card:hover {
+            transform: translateX(5px);
+        }
+
+        .job-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .job-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .tag {
+            padding: 2px 8px;
+            border-radius: 4px;
+            background-color: #e8eaf6;
+            color: var(--primary-color);
+            font-size: 0.8rem;
+        }
+
+        .job-cta {
+            text-align: right;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Guide Section */
+        .guide-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .guide-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .guide-list li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .guide-list li::before {
+            content: "•";
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .guide-image {
+            background-color: #ddd;
+            height: 300px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .guide-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* FAQ */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .faq-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .faq-item p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #263238;
+            color: #b0bec5;
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #37474f;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .job-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .job-cta {
+                width: 100%;
+                text-align: left;
+            }
+
+            .guide-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-container">
+        <div class="logo">Symphonic<span>Jobs</span></div>
+        <nav>
+            <ul>
+                <li><a href="#">乐团招聘</a></li>
+                <li><a href="#">求职指南</a></li>
+                <li><a href="#">职业发展</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn-primary">发布职位</a>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>连接音乐家与梦想乐团</h1>
+            <p>国内最专业的交响乐团招聘信息聚合平台，为职业音乐家提供精准的求职机会，为乐团提供高效的人才选拔渠道。</p>
+            <a href="#jobs" class="btn-primary" style="background-color: var(--secondary-color); color: var(--white);">浏览最新职位</a>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>120+</h3>
+                    <p>合作乐团</p>
+                </div>
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>有效职位</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10k+</h3>
+                    <p>注册乐手</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>乐部分类</h2>
+                <p>查找您所在领域的专业招聘机会</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">🎻</div>
+                    <h3>弦乐部</h3>
+                    <p>小提琴 / 中提琴 / 大提琴 / 低音提琴</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🎺</div>
+                    <h3>木管部</h3>
+                    <p>长笛 / 双簧管 / 单簧管 / 巴松管</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🥁</div>
+                    <h3>铜管部</h3>
+                    <p>圆号 / 小号 / 长号 / 大号</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🎹</div>
+                    <h3>打击乐部</h3>
+                    <p>定音鼓 / 钹 / 弹拨乐 / 现代打击乐</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🎤</div>
+                    <h3>声乐部</h3>
+                    <p>女高音 / 女低音 / 男高音 / 男低音</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🎼</div>
+                    <h3>指挥与行政</h3>
+                    <p>首席指挥 / 音乐总监 / 票务行政</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Listings -->
+    <section class="section" id="jobs">
+        <div class="container">
+            <div class="section-header">
+                <h2>最新招聘</h2>
+                <p>精选近期开放申请的交响乐团职位</p>
+            </div>
+            <div class="job-list">
+                <!-- Job 1 -->
+                <article class="job-card">
+                    <div class="job-info">
+                        <h3>国家大剧院交响乐团 - 首席小提琴手</h3>
+                        <div class="job-meta">
+                            <span>📍 北京</span>
+                            <span>📅 截止日期：2023-11-15</span>
+                        </div>
+                    </div>
+                    <div class="job-cta">
+                        <span class="tag">全职</span>
+                        <br>
+                        <a href="#" class="btn-outline" style="margin-top: 10px;">查看详情</a>
+                    </div>
+                </article>
+
+                <!-- Job 2 -->
+                <article class="job-card">
+                    <div class="job-info">
+                        <h3>上海爱乐乐团 - 圆号副首席</h3>
+                        <div class="job-meta">
+                            <span>📍 上海</span>
+                            <span>📅 截止日期：2023-11-20</span>
+                        </div>
+                    </div>
+                    <div class="job-cta">
+                        <span class="tag">全职</span>
+                        <br>
+                        <a href="#" class="btn-outline" style="margin-top: 10px;">查看详情</a>
+                    </div>
+                </article>
+
+                <!-- Job 3 -->
+                <article class="job-card">
+                    <div class="job-info">
+                        <h3>广州交响乐团 - 低音提琴演奏员</h3>
+                        <div class="job-meta">
+                            <span>📍 广州</span>
+                            <span>📅 截止日期：2023-11-25</span>
+                        </div>
+                    </div>
+                    <div class="job-cta">
+                        <span class="tag">全职</span>
+                        <br>
+                        <a href="#" class="btn-outline" style="margin-top: 10px;">查看详情</a>
+                    </div>
+                </article>
+
+                <!-- Job 4 -->
+                <article class="job-card">
+                    <div class="job-info">
+                        <h3>杭州爱乐乐团 - 打击乐演奏员</h3>
+                        <div class="job-meta">
+                            <span>📍 杭州</span>
+                            <span>📅 截止日期：2023-12-01</span>
+                        </div>
+                    </div>
+                    <div class="job-cta">
+                        <span class="tag">全职</span>
+                        <br>
+                        <a href="#" class="btn-outline" style="margin-top: 10px;">查看详情</a>
+                    </div>
+                </article>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="#" class="btn-outline">查看所有职位</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guide Section -->
+    <section class="section" style="background-color: var(--white);">
+        <div class="container">
+            <div class="guide-container">
+                <div class="guide-image">
+                    <img src="https://picsum.photos/seed/orchestra/600/400" alt="交响乐团排练场景">
+                </div>
+                <div class="guide-content">
+                    <h3>求职指南：如何加入交响乐团</h3>
+                    <p>加入职业交响乐团是许多音乐家的职业目标。以下是基于行业经验的求职建议，帮助您提高成功率。</p>
+                    <br>
+                    <ul class="guide-list">
+                        <li><strong>简历与作品集：</strong> 准备包含演奏经历、获奖记录及高清演奏视频的简历。视频应展示不同风格的曲目（如古典、协奏曲、现代作品）。</li>
+                        <li><strong>试奏准备：</strong> 提前了解乐团的近期演出曲目单，并针对性地进行练习。试奏通常包括独奏片段和乐团分谱合奏。</li>
+                        <li><strong>试镜技巧：</strong> 注意着装得体，保持良好的仪态。在试奏过程中，不仅要展示技术，更要展现出对音乐的诠释能力和与乐队的配合意识。</li>
+                        <li><strong>建立人脉：</strong> 参加大师班、音乐节及行业聚会，结识乐团首席和音乐总监，增加被推荐的机会。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>常见问题</h2>
+                <p>关于乐团招聘的疑问解答</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>没有乐团工作经验可以应聘吗？</h4>
+                    <p>可以，但通常需要具备扎实的演奏功底。部分乐团设有“实习生”或“助理”岗位，作为进入正式编制的过渡。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>试奏通常包含哪些内容？</h4>
+                    <p>通常包括自选独奏片段（2-3分钟）、指定片段（乐团常演曲目）、以及与乐团分谱合奏（通常2-3首）。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>外籍乐手如何申请国内乐团？</h4>
+                    <p>需符合国内的签证政策。部分一线城市乐团对具有国际演出经验的乐手有特殊引进计划，建议关注乐团官网的“人才引进”板块。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p style="font-size: 0.9rem; line-height: 1.8;">
+                    SymphonicJobs 致力于搭建国内顶尖的古典音乐人才与职业乐团之间的桥梁，推动中国交响乐事业的发展。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">乐团名录</a></li>
+                    <li><a href="#">求职社区</a></li>
+                    <li><a href="#">大师讲座</a></li>
+                    <li><a href="#">联系客服</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系方式</h4>
+                <ul>
+                    <li>邮箱：recruit@symphonicjobs.com</li>
+                    <li>电话：400-123-4567</li>
+                    <li>地址：北京市朝阳区音乐艺术中心A座</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 SymphonicJobs. 保留所有权利。</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
